@@ -29,10 +29,13 @@ El archivo `solution.nr` contiene una implementación básica que:
 4. El verifier solo puede confirmar que existe un par (a,b) que satisface la ecuación, sin conocer los valores específicos
 
 ## Tareas
-1. Entiende el código base en `solution.nr`
-2. Ejecuta el test existente que verifica el triplete (3,4,5)
-3. Intenta agregar más tests con otros tripletes pitagóricos conocidos
-4. (Opcional) Modifica el código para manejar casos de error
+1. Intenta hacer tu propia implementación en `main.nr`
+2. Comparalo con el codigo `solution.nr` ¿Llegaste a una respuesta correcta?
+3. Entiende el código base en `solution.nr`
+4. Ejecuta el test existente que verifica el triplete (3,4,5)
+5. Intenta agregar más tests con otros tripletes pitagóricos conocidos
+6. (Opcional) Modifica el código para manejar casos de error
+7. Genera una prueba y verificala: https://noir-lang.org/docs/getting_started/quick_start
 
 ## Tripletes Pitagóricos Comunes
 Algunos tripletes pitagóricos para probar:
