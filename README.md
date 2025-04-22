@@ -38,6 +38,60 @@ curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/head
 bbup
 ```
 
+## Creating and Verifying Proofs
+
+### Compiling and Executing
+
+After writing your Noir program, you need to compile it and generate a witness. Here's how the process works:
+
+1. First, use `nargo check` to generate a `Prover.toml` file where you'll specify your input values:
+
+```bash
+nargo check
+```
+
+2. Edit the `Prover.toml` file with your input values:
+
+```toml
+x = "1"
+y = "2"
+```
+
+3. Compile and execute your Noir program with `nargo execute`:
+
+```bash
+nargo execute
+```
+
+This command will:
+- Compile your Noir program (if not already compiled or if edited)
+- Generate a witness file at `./target/witness-name.gz`
+- Create compiled artifacts at `./target/your_project.json`
+
+### Proving and Verifying
+
+With your circuit compiled and witness generated, you can now generate and verify proofs using Barretenberg (BB):
+
+1. Generate a proof:
+
+```bash
+bb prove -b ./target/your_project.json -w ./target/your_project.gz -o ./target
+```
+
+2. Generate a verification key:
+
+```bash
+bb write_vk -b ./target/your_project.json -o ./target
+```
+
+3. Verify the proof:
+
+```bash
+bb verify -k ./target/vk -p ./target/proof
+```
+
+For more advanced verification options, including generating Solidity verifiers for blockchain deployment, check out the [Noir documentation on Solidity verifiers](https://noir-lang.org/docs/how_to/how-to-solidity-verifier).
+
 ## Additional Resources
 
 - [Official Noir Documentation](https://noir-lang.org/docs/)

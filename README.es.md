@@ -38,6 +38,60 @@ curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/head
 bbup
 ```
 
+## Creación y Verificación de Pruebas
+
+### Compilación y Ejecución
+
+Después de escribir tu programa Noir, necesitas compilarlo y generar un testigo (witness). Así es como funciona el proceso:
+
+1. Primero, usa `nargo check` para generar un archivo `Prover.toml` donde especificarás tus valores de entrada:
+
+```bash
+nargo check
+```
+
+2. Edita el archivo `Prover.toml` con tus valores de entrada:
+
+```toml
+x = "1"
+y = "2"
+```
+
+3. Compila y ejecuta tu programa Noir con `nargo execute`:
+
+```bash
+nargo execute
+```
+
+Este comando:
+- Compilará tu programa Noir (si no está ya compilado o si ha sido editado)
+- Generará un archivo de testigo en `./target/witness-name.gz`
+- Creará artefactos compilados en `./target/tu_proyecto.json`
+
+### Generación y Verificación de Pruebas
+
+Con tu circuito compilado y el testigo generado, ahora puedes generar y verificar pruebas usando Barretenberg (BB):
+
+1. Genera una prueba:
+
+```bash
+bb prove -b ./target/tu_proyecto.json -w ./target/tu_proyecto.gz -o ./target
+```
+
+2. Genera una clave de verificación:
+
+```bash
+bb write_vk -b ./target/tu_proyecto.json -o ./target
+```
+
+3. Verifica la prueba:
+
+```bash
+bb verify -k ./target/vk -p ./target/proof
+```
+
+Para opciones de verificación más avanzadas, incluyendo la generación de verificadores Solidity para despliegue en blockchain, consulta la [documentación de Noir sobre verificadores Solidity](https://noir-lang.org/docs/how_to/how-to-solidity-verifier).
+
 ## Recursos Adicionales
 
 - [Documentación oficial de Noir](https://noir-lang.org/docs/)
