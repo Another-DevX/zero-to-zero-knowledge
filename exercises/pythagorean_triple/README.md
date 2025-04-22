@@ -1,54 +1,56 @@
-# Workshop: Verificación de Tripletas Pitagóricas
+# Workshop: Pythagorean Triple Verification
 
-## Objetivo
-En este ejercicio, aprenderás a implementar una verificación de tripletes pitagóricos usando Noir, un lenguaje de programación para circuitos aritméticos de cero conocimiento.
+[English](README.md) | [Español](README.es.md)
 
-## ¿Qué es un Triplete Pitagórico?
-Un triplete pitagórico es un conjunto de tres números enteros positivos (a, b, c) que satisfacen la ecuación del teorema de Pitágoras:
+## Objective
+In this exercise, you will learn to implement a verification of Pythagorean triples using Noir, a programming language for zero-knowledge arithmetic circuits.
+
+## What is a Pythagorean Triple?
+A Pythagorean triple is a set of three positive integers (a, b, c) that satisfy the Pythagorean theorem equation:
 ```
 a² + b² = c²
 ```
 
-## Aspectos de Privacidad
-En este ejercicio, implementamos una prueba de conocimiento cero donde:
-- `a` y `b` son valores privados (solo conocidos por el prover)
-- `c` es un valor público (conocido por el verifier)
-- El verifier solo necesita saber que existe un par (a,b) que satisface la ecuación, sin conocer los valores específicos de a y b
+## Privacy Aspects
+In this exercise, we implement a zero-knowledge proof where:
+- `a` and `b` are private values (known only to the prover)
+- `c` is a public value (known to the verifier)
+- The verifier only needs to know that there exists a pair (a,b) that satisfies the equation, without knowing the specific values of a and b
 
-## El Ejercicio
-En este ejercicio, implementaremos una función que verifica si tres números forman un triplete pitagórico válido. La función:
-- Toma tres números como entrada (a, b, c)
-- Verifica si a² + b² = c²
-- Devuelve un error si la ecuación no se cumple
+## The Exercise
+In this exercise, we will implement a function that verifies if three numbers form a valid Pythagorean triple. The function:
+- Takes three numbers as input (a, b, c)
+- Verifies if a² + b² = c²
+- Returns an error if the equation is not satisfied
 
-## Código Base
-El archivo `solution.nr` contiene una implementación básica que:
-1. Toma tres parámetros: `a` y `b` (privados) y `c` (público)
-2. Calcula a² + b² manteniendo la privacidad de a y b
-3. Verifica que el resultado sea igual a c²
-4. El verifier solo puede confirmar que existe un par (a,b) que satisface la ecuación, sin conocer los valores específicos
+## Base Code
+The `solution.nr` file contains a basic implementation that:
+1. Takes three parameters: `a` and `b` (private) and `c` (public)
+2. Calculates a² + b² while maintaining the privacy of a and b
+3. Verifies that the result equals c²
+4. The verifier can only confirm that there exists a pair (a,b) that satisfies the equation, without knowing the specific values
 
-## Tareas
-1. Intenta hacer tu propia implementación en `main.nr`
-2. Comparalo con el codigo `solution.nr` ¿Llegaste a una respuesta correcta?
-3. Entiende el código base en `solution.nr`
-4. Ejecuta el test existente que verifica el triplete (3,4,5)
-5. Intenta agregar más tests con otros tripletes pitagóricos conocidos
-6. (Opcional) Modifica el código para manejar casos de error
-7. Genera una prueba y verificala: https://noir-lang.org/docs/getting_started/quick_start
+## Tasks
+1. Try to make your own implementation in `main.nr`
+2. Compare it with the code in `solution.nr`. Did you arrive at a correct answer?
+3. Understand the base code in `solution.nr`
+4. Run the existing test that verifies the triple (3,4,5)
+5. Try to add more tests with other known Pythagorean triples
+6. (Optional) Modify the code to handle error cases
+7. Generate a proof and verify it: https://noir-lang.org/docs/getting_started/quick_start
 
-## Tripletes Pitagóricos Comunes
-Algunos tripletes pitagóricos para probar:
+## Common Pythagorean Triples
+Some Pythagorean triples to test:
 - (3, 4, 5)
 - (5, 12, 13)
 - (6, 8, 10)
 - (8, 15, 17)
 
-## Pistas
-- Recuerda que estamos trabajando con campos finitos en Noir
-- Las operaciones aritméticas son módulo el tamaño del campo
-- Considera cómo manejar casos donde los números son muy grandes
+## Hints
+- Remember we're working with finite fields in Noir
+- Arithmetic operations are modulo the field size
+- Consider how to handle cases where numbers are very large
 
-## Recursos Adicionales
-- [Tripletes Pitagóricos](https://es.wikipedia.org/wiki/Terna_pitag%C3%B3rica)
-- [Documentación de Noir](https://docs.noir-lang.org/)
+## Additional Resources
+- [Pythagorean Triples](https://en.wikipedia.org/wiki/Pythagorean_triple)
+- [Noir Documentation](https://docs.noir-lang.org/)

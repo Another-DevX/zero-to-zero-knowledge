@@ -1,64 +1,66 @@
 # Zero to Zero Knowledge Workshop
 
-Este workshop está diseñado para introducirte al mundo de las pruebas de conocimiento cero (Zero Knowledge Proofs) utilizando Noir, un lenguaje de programación moderno y poderoso para desarrollar aplicaciones ZK.
+[English](README.md) | [Español](README.es.md)
 
-## ¿Qué es Noir?
+This workshop is designed to introduce you to the world of Zero Knowledge Proofs using Noir, a modern and powerful programming language for developing ZK applications.
 
-Noir es un lenguaje de programación diseñado específicamente para crear aplicaciones de conocimiento cero. Está inspirado en Rust y proporciona una sintaxis moderna y segura para desarrollar circuitos aritméticos que pueden ser compilados en pruebas de conocimiento cero.
+## What is Noir?
 
-## Instalación
+Noir is a programming language specifically designed for creating zero knowledge applications. It is inspired by Rust and provides a modern and secure syntax for developing arithmetic circuits that can be compiled into zero knowledge proofs.
 
-### 1. Instalar Noir (Nargo)
+## Installation
 
-La forma más sencilla de desarrollar con Noir es usando Nargo, la herramienta CLI. Nargo te permite crear nuevos proyectos, compilar, ejecutar y probar programas Noir desde la terminal.
+### 1. Install Noir (Nargo)
 
-Para instalar Nargo, puedes usar el script de instalación `noirup`:
+The easiest way to develop with Noir is using Nargo, the CLI tool. Nargo allows you to create new projects, compile, run, and test Noir programs from the terminal.
+
+To install Nargo, you can use the `noirup` installation script:
 
 ```bash
 curl -L https://raw.githubusercontent.com/noir-lang/noirup/refs/heads/main/install | bash
 noirup
 ```
 
-Una vez instalado, puedes configurar las autocompletaciones para el comando `nargo` en tu shell.
+Once installed, you can set up command completions for `nargo` in your shell.
 
-### 2. Instalar el Backend de Pruebas
+### 2. Install the Proof Backend
 
-Después de instalar Noir, necesitas instalar un backend de pruebas para trabajar con tus programas Noir. Los backends de pruebas te proporcionan la capacidad de:
-- Generar pruebas
-- Verificar pruebas
-- Generar contratos inteligentes
-- Y más...
+After installing Noir, you need to install a proof backend to work with your Noir programs. Proof backends provide you with the ability to:
+- Generate proofs
+- Verify proofs
+- Generate smart contracts
+- And more...
 
-En este workshop, utilizaremos Barretenberg, un backend de pruebas desarrollado por Aztec Labs. Para instalarlo:
+In this workshop, we will use Barretenberg, a proof backend developed by Aztec Labs. To install it:
 
 ```bash
 curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/master/barretenberg/bbup/install | bash
 bbup
 ```
 
-## Recursos Adicionales
+## Additional Resources
 
-- [Documentación oficial de Noir](https://noir-lang.org/docs/)
-- [Awesome Noir](https://github.com/noir-lang/awesome-noir) - Lista completa de backends de pruebas compatibles
-- [Repositorio de Noir en GitHub](https://github.com/noir-lang/noir)
-- [Comunidad de Noir en Discord](https://discord.gg/noir-lang)
-- [Extensión de Noir para VS Code](https://marketplace.cursorapi.com/items?itemName=noir-lang.vscode-noir) - Noir Language Support (v0.0.16) para resaltado de sintaxis y autocompletado
+- [Official Noir Documentation](https://noir-lang.org/docs/)
+- [Awesome Noir](https://github.com/noir-lang/awesome-noir) - Complete list of compatible proof backends
+- [Noir GitHub Repository](https://github.com/noir-lang/noir)
+- [Noir Discord Community](https://discord.gg/noir-lang)
+- [Noir VS Code Extension](https://marketplace.cursorapi.com/items?itemName=noir-lang.vscode-noir) - Noir Language Support (v0.0.16) for syntax highlighting and autocompletion
 
-## Estructura del Workshop
+## Workshop Structure
 
-1. Introducción a las pruebas de conocimiento cero
-2. Fundamentos de Noir
-3. Desarrollo de circuitos básicos
-4. Integración con contratos inteligentes
-5. Proyectos prácticos
+1. Introduction to Zero Knowledge Proofs
+2. Noir Fundamentals
+3. Basic Circuit Development
+4. Smart Contract Integration
+5. Practical Projects
 
-## Requisitos Previos
+## Prerequisites
 
-- Conocimientos básicos de programación
-- Familiaridad con conceptos básicos de criptografía
-- Git instalado en tu sistema
-- Un editor de código (VS Code/Cursor recomendado)
+- Basic programming knowledge
+- Familiarity with basic cryptography concepts
+- Git installed on your system
+- A code editor (VS Code/Cursor recommended)
 
-## Contribuir
+## Contributing
 
-Si encuentras algún error o tienes sugerencias para mejorar este workshop, no dudes en abrir un issue o enviar un pull request.
+If you find any errors or have suggestions to improve this workshop, feel free to open an issue or submit a pull request.
