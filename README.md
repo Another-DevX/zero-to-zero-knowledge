@@ -97,7 +97,6 @@ For more advanced verification options, including generating Solidity verifiers 
 - [Official Noir Documentation](https://noir-lang.org/docs/)
 - [Awesome Noir](https://github.com/noir-lang/awesome-noir) - Complete list of compatible proof backends
 - [Noir GitHub Repository](https://github.com/noir-lang/noir)
-- [Noir Discord Community](https://discord.gg/noir-lang)
 - [Noir VS Code Extension](https://marketplace.cursorapi.com/items?itemName=noir-lang.vscode-noir) - Noir Language Support (v0.0.16) for syntax highlighting and autocompletion
 
 ## Workshop Structure

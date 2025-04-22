@@ -97,7 +97,6 @@ Para opciones de verificación más avanzadas, incluyendo la generación de veri
 - [Documentación oficial de Noir](https://noir-lang.org/docs/)
 - [Awesome Noir](https://github.com/noir-lang/awesome-noir) - Lista completa de backends de pruebas compatibles
 - [Repositorio de Noir en GitHub](https://github.com/noir-lang/noir)
-- [Comunidad de Noir en Discord](https://discord.gg/noir-lang)
 - [Extensión de Noir para VS Code](https://marketplace.cursorapi.com/items?itemName=noir-lang.vscode-noir) - Noir Language Support (v0.0.16) para resaltado de sintaxis y autocompletado
 
 ## Estructura del Workshop
