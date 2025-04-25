@@ -1,0 +1,24 @@
+{
+    "name": "ethereum-merkle-tree",
+    "version": "1.0.0",
+    "description": "Merkle tree verification",
+    "main": "dist/main.js",
+    "scripts": {
+      "build": "tsc",
+      "start": "node dist/main.js",
+      "dev": "ts-node main.ts"
+    },
+    "dependencies": {
+      "@aztec/bb.js": "^0.0.1-alpha.1",
+      "circomlibjs": "^0.1.7",
+      "ethers": "^6.11.1",
+      "ffjavascript": "^0.3.1"
+    },
+    "devDependencies": {
+      "@types/circomlibjs": "^0.1.6",
+      "@types/node": "^20.11.24",
+      "ts-node": "^10.9.2",
+      "typescript": "^5.3.3"
+    }
+  }
+  
