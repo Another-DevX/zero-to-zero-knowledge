@@ -1,0 +1,6 @@
+[package]
+name = "sudoku_verification"
+type = "bin"
+authors = [""]
+
+[dependencies]
